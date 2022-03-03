@@ -13,5 +13,6 @@ namespace ML
         public string Nombre { get; set; }
         public decimal Costo { get; set; }
         public string Descripcion { get; set; }
+        public List<object> Materias { get; set; }
     }
 }
