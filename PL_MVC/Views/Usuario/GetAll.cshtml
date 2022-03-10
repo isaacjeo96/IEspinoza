@@ -1,0 +1,87 @@
+﻿@model ML.Direccion
+@{
+    ViewBag.Title = "Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+    <h3>Aqui se muestran los datos de los Usuarios registrados, actualiza,borra o agrega un usuario</h3>
+    <hr />
+
+    <div class="row">
+        @*<div class="col-md-12 text-right">*@
+        <div class="col-md-12 text-right">
+            @Html.ActionLink("+", "Form", "Usuario", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+
+    </div>
+
+    <br />
+
+    @if (Model.Direcciones.Count > 0)
+    {
+        <div class="row" style="padding-top:30px">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <tr>
+                        <th class="text-center" scope="col">
+                            Editar
+                        </th>
+                        <th class="hidden" scope="col">
+                            IdUsuario
+                        </th>
+                        <th class="text-center" scope="col">
+                            Nombre
+                        </th>
+                        <th class="hidden" scope="col">
+                            IdDireccion
+                        </th>
+                        <th class="text-center" scope="col">
+                            Dirección
+                        </th>
+                        <th class="text-center" scope="col">
+                            Eliminar
+                        </th>
+
+                    </tr>
+                    @foreach (ML.Direccion direccion in Model.Direcciones)
+                     {
+                        <tr>
+                            <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Usuario", new { IdUsuario = direccion.Usuario.IdUsuario })"></a></td>
+
+                            <td class="hidden">
+                                @direccion.Usuario.IdUsuario
+                            </td>
+                            <td class="text-center">
+                                @direccion.Usuario.Nombre @direccion.Usuario.ApellidoPaterno @direccion.Usuario.ApellidoMaterno
+                            </td>
+                            <td class="hidden">
+                                @direccion.IdDireccion
+                            </td>
+
+                            <td class="text-center">
+                                @direccion.Calle @direccion.NumeroExterior @direccion.NumeroInterior, @direccion.Colonia.Nombre ,@direccion.Colonia.CodigoPostal,
+                                @direccion.Colonia.Municipio.Nombre, @direccion.Colonia.Municipio.Estado.Nombre, @direccion.Colonia.Municipio.Estado.Pais.Nombre
+                            </td>
+
+                            <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Usuario", new { IdUsuario = direccion.Usuario.IdUsuario})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+
+
+                        </tr>
+                     }
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    No se encontraron registros sobre los semestres
+                </div>
+            </div>
+        </div>
+    }
+</div>

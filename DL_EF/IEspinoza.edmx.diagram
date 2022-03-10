@@ -6,6 +6,17 @@
     <edmx:Diagrams>
       <Diagram DiagramId="cfddb1b4f01f4139a3ff8dddaef55acc" Name="Diagram1">
         <EntityTypeShape EntityType="IEspinozaModel.Materia" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IEspinozaModel.Colonia" Width="1.5" PointX="10.125" PointY="1.125" />
+        <EntityTypeShape EntityType="IEspinozaModel.Direccion" Width="1.5" PointX="12.375" PointY="1" />
+        <EntityTypeShape EntityType="IEspinozaModel.Estado" Width="1.5" PointX="5.625" PointY="1.25" />
+        <EntityTypeShape EntityType="IEspinozaModel.Municipio" Width="1.5" PointX="7.875" PointY="1.25" />
+        <EntityTypeShape EntityType="IEspinozaModel.Pai" Width="1.5" PointX="3.375" PointY="1.375" />
+        <EntityTypeShape EntityType="IEspinozaModel.Usuario" Width="1.5" PointX="10.125" PointY="5.25" />
+        <AssociationConnector Association="IEspinozaModel.FK__Colonia__IdMunic__5165187F" />
+        <AssociationConnector Association="IEspinozaModel.FK__Direccion__IdCol__5629CD9C" />
+        <AssociationConnector Association="IEspinozaModel.FK__Direccion__IdUsu__571DF1D5" />
+        <AssociationConnector Association="IEspinozaModel.FK__Estado__IdPais__4BAC3F29" />
+        <AssociationConnector Association="IEspinozaModel.FK__Municipio__IdEst__4E88ABD4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

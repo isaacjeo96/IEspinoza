@@ -51,6 +51,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Colonia.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ColoniaGetByIdMunicipio_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Direccion.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DireccionGetAll_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DireccionGetByIdColonia_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DirecciongGetByIdUsuario_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoGetByIdPais_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
     <Compile Include="IEspinoza.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,7 +96,28 @@
     <Compile Include="MateriaGetAll_Result.cs">
       <DependentUpon>IEspinoza.tt</DependentUpon>
     </Compile>
+    <Compile Include="Municipio.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MunicipioGetByIdEstado_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pai.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisGetAll_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGetAll_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGetById_Result.cs">
+      <DependentUpon>IEspinoza.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="IEspinoza.edmx">
